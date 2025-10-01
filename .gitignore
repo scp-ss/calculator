@@ -1,0 +1,26 @@
+
+
+
+# Ignore Cargo.lock files in specific directories
+./rust/Cargo.lock
+./learning/Cargo.lock
+
+# Ignore all target directories and their contents
+/rust/target/
+/learning/target/
+/backend/rust/target/
+
+# Ignore the .git directory (usually not necessary)
+# .git/
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Logs
+*.log
+
+# Environment files
+.env
+

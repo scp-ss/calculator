@@ -1,0 +1,98 @@
+rustc --emit=asm main.rs
+
+rustc -C opt-level=3 --emit=asm main.rs
+rustc --target=x86_64-pc-windows-msvc --emit=asm main.rs
+
+rustup install stable-x86_64-pc-windows-gnu
+
+rustup default stable-x86_64-pc-windows-gnu
+
+rustc --emit=asm main.rs
+
+
+gcc -c main.s -o main.o
+as main.s -o main.o
+
+
+
+gcc main.o -o main.exe
+
+
+
+dumpbin /headers main.exe | findstr machine
+
+
+
+objdump -f main.exe
+
+
+rustc --version --verbose
+rustup install stable-x86_64-pc-windows-gnu
+
+rustup default stable-x86_64-pc-windows-gnu
+
+rustup default stable-x86_64-pc-windows-msvc
+
+
+
+
+Target Triple	Platform	Use Case
+wasm32-unknown-unknown	WebAssembly	Web apps, browser runtimes
+x86_64-unknown-linux-gnu	Linux x64	Cross-compile for Linux
+aarch64-pc-windows-msvc	Windows ARM64	Surface Pro X, ARM laptops
+x86_64-pc-windows-gnu
+
+
+
+msvc
+
+THIS ACTUALLY WORKS
+PS C:\Users\muizz> rustup toolchain install stable-gnu
+>> rustup default stable-gnu
+rustup default stable-msvc
+
+
+
+pacman -S mingw-w64-x86_64-toolchain base-devel mingw-w64-x86_64-gtk4 mingw-w64-x86_64-gettext mingw-w64-x86_64-libxml2 mingw-w64-x86_64-librsvg mingw-w64-x86_64-pkgconf mingw-w64-x86_64-gcc mingw-w64-x86_64-libadwaita mingw-w64-x86_64-lua
+
+
+
+
+Welcome to Gaming OS 🙂
+
+Download Rust
+Download GNU target: rustup toolchain install stable-gnu && rustup default stable-gnu
+Download MSYS32
+Open MSYS32 MINGW32
+Run: pacman -Syu just in case.
+Run pacman -S mingw-w64-x86_64-toolchain base-devel mingw-w64-x86_64-gtk4 mingw-w64-x86_64-gettext mingw-w64-x86_64-libxml2 mingw-w64-x86_64-librsvg mingw-w64-x86_64-pkgconf mingw-w64-x86_64-gcc mingw-w64-x86_64-libadwaita mingw-w64-x86_64-lua
+Go to Settings -> Search and open Advanced system settings -> Click on Environment variables (or just search "path")
+Select Path -> Click on Edit -> Add the following three entries: C:\msys64\mingw64\include, C:\msys64\mingw64\bin, and C:\msys64\mingw64\lib.
+Open a terminal in the folder with napture/, run cargo run.
+
+
+
+Target architecture:
+
+bash
+rustc your_file.rs --emit=asm --target=x86_64-pc-windows-msvc
+Optimization level:
+
+bash
+rustc your_file.rs --emit=asm -C opt-level=3
+Debug info:
+
+bash
+rustc your_file.rs --emit=asm -C debuginfo=2
+
+
+
+
+
+
+
+
+U NEED TO ADD MASM TO ENV VARS (find it using ruinng the vs developer console and the dir wll
+be written tere)
+
+ml64 /c /Fo main.obj main.s
