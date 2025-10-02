@@ -4,11 +4,12 @@
 # Ignore Cargo.lock files in specific directories
 ./rust/Cargo.lock
 ./learning/Cargo.lock
-
+./whatsapp_clone/Cargo.lock
 # Ignore all target directories and their contents
 /rust/target/
 /learning/target/
 /backend/rust/target/
+/whatsapp_clone/target
 
 # Ignore the .git directory (usually not necessary)
 # .git/

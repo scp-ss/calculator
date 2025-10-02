@@ -8,8 +8,9 @@ mod vars_in_rust;
 use crate::math::{
     add,
     divide,
+    power,
     //exponent,
-    square,
+    //square,
     subtract,
 };
 fn main() {
@@ -55,8 +56,8 @@ fn main() {
 
     println!("THE ANSWER OF {}/{} is {}", dividant, divider, answer);
 
-    let nice: i32 = square(10);
-    println!("SQUARE of 10 IS {}, (or {})", nice, square(10));
+    // let nice: i32 = square(10);
+    //println!("SQUARE of 10 IS {}, (or {})", nice, square(10));
 
     let no1: i32 = 20;
     let no2: i32 = 10;
@@ -68,4 +69,5 @@ fn main() {
         "{} powered by {} is {}, and {} powered by {} is {}",
         no1, no2, answerto_nno, no2, no1, answerto_nno2
     );
+    println!("10 powered by 4 is {}", math::power(10, 4));
 }
