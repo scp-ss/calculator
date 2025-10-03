@@ -5,12 +5,13 @@
 ./rust/Cargo.lock
 ./learning/Cargo.lock
 ./whatsapp_clone/Cargo.lock
+./CP/Cargo.lock
 # Ignore all target directories and their contents
 /rust/target/
 /learning/target/
 /backend/rust/target/
 /whatsapp_clone/target
-
+/CP/target
 # Ignore the .git directory (usually not necessary)
 # .git/
 
